@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<!-- saved from url=(0084)https://sheffieldnlp.github.io/com4513-6513/lectures_reveal_js/lecture1_intro.html#/ -->
+<html lang="en" class="js no-mobile desktop no-ie chrome chrome67 com4513-6513-section lectures_reveal_js-section w-1680 gt-240 gt-320 gt-480 gt-640 gt-768 gt-800 gt-1024 gt-1280 gt-1440 lt-1920 no-portrait landscape gradient rgba opacity textshadow multiplebgs boxshadow borderimage borderradius cssreflections csstransforms csstransitions no-touch retina fontface domloaded gr__sheffieldnlp_github_io" id="lecture1_intro-page"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		
+
+		<title>Introduction to Natural Langauge Processing</title>
+
+		<meta name="author" content="Andreas Vlachos">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="./Introduction to Natural Langauge Processing_files/reveal.css">
+		<link rel="stylesheet" href="./Introduction to Natural Langauge Processing_files/solarized.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="./Introduction to Natural Langauge Processing_files/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script><link rel="stylesheet" type="text/css" href="./Introduction to Natural Langauge Processing_files/paper.css">
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]--><script type="text/javascript" src="./Introduction to Natural Langauge Processing_files/marked.js"></script><script type="text/javascript" src="./Introduction to Natural Langauge Processing_files/markdown.js"></script><script type="text/javascript" src="./Introduction to Natural Langauge Processing_files/menu.js"></script>
+	<script type="text/javascript" src="./Introduction to Natural Langauge Processing_files/highlight.js"></script><script type="text/javascript" src="./Introduction to Natural Langauge Processing_files/zoom.js"></script><script type="text/javascript" src="./Introduction to Natural Langauge Processing_files/notes.js"></script><script type="text/javascript" src="./Introduction to Natural Langauge Processing_files/jeesh.min.js"></script><script type="text/javascript" src="./Introduction to Natural Langauge Processing_files/bowser.min.js"></script><link rel="stylesheet" href="./Introduction to Natural Langauge Processing_files/menu.css"><link rel="stylesheet" href="./Introduction to Natural Langauge Processing_files/font-awesome.min.css"></head>
+
+	<body data-gr-c-s-loaded="true" style="transition: -webkit-transform 0.8s ease;">
+
+		<div class="reveal slide center has-horizontal-slides ready" role="application" data-transition-speed="default" data-background-transition="fade">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides" style="width: 960px; height: 700px; zoom: 1.1136;">
+				<section class="present" style="top: 74px; display: block;" data-node-uid="1">
+					<h2>Natural Language Processing</h2>
+					<p>(COM4513/6513)</p>
+					<h2>Introduction</h2>
+					<p>
+						<a href="http://andreasvlachos.github.io/">Andreas Vlachos</a><br>
+							a.vlachos@sheffield.ac.uk<br>
+							</p>
+							<p>
+						<small>Department of Computer Science<br>
+							University of Sheffield
+						</small>
+					</p>
+				</section>
+
+				<section style="text-align: left; top: 0px; display: block;" hidden="" aria-hidden="true" class="future" data-node-uid="2">
+					<h3>Course Practicalities</h3>
+					<p>Lab demonstrators:
+					</p><ul>
+						<li>Hardy</li>
+						<li>Thales FC Bertaglia</li>
+						<li>Fernando Alva Manchego</li>
+						<li>Harry Jackson</li>
+						<li>James Thorne</li>
+					</ul><p></p>
+					<!--TODO: move the google group to a slide of its own togethe with NSS-->
+					<p>Join the module's <a href="https://groups.google.com/a/sheffield.ac.uk/forum/?hl=en-GB#!forum/com4513-6513-2018-group">Google group</a> (use @sheffield.ac.uk):
+					</p>
+					<p>Office hours: appointments via email (to me)</p>
+					<p>
+					Lectures and lab assignments available from:
+					<a href="https://sheffieldnlp.github.io/com4513-6513/">https://sheffieldnlp.github.io/com4513-6513/</a>
+				</p>
+				</section>
+
+				<section style="text-align: left; top: 13px; display: block;" hidden="" aria-hidden="true" class="future" data-node-uid="3">
+					<h3>Assessment</h3>
+					<p>
+					60% exam where <b>everything</b> is assessed: lecture slides,
+					bibliographical references, classroom discussion, lab content, etc.
+				</p>
+				<p></p>
+					25% on 4 week-long lab assignments (MOLE):
+				<ul>
+					<li>Deadline: the <b>start</b> of the next lab<br>
+						</li><li>Do them (so that we can help) <a class="fragment" href="http://www.dcs.shef.ac.uk/intranet/teaching/public/introweek/undergraduate/Personal%20Tutorials%202015.pdf" data-fragment-index="0"><i><b>and don't plagiarize!</b></i></a></li>
+					</ul>
+				<p></p>
+				<p>
+					15% class project (MOLE):
+					</p><ul>
+						<li>week 6: interim report (feedback without grade)</li>
+						<li> week 12: final report (graded)</li>
+					</ul>
+				<p></p>
+				</section>
+
+				<section style="text-align: left; top: 350px; display: none;" hidden="" aria-hidden="true" class="future" data-node-uid="4">
+					<h3>Feedback</h3>
+					<p>To you:
+					</p><ul>
+						<li>During the lab sessions on assignments</li>
+						<li>Questions in class and the Google group</li>
+					</ul>
+				<p></p>
+				<p class="fragment" data-fragment-index="0">
+					And to me:
+					</p><ul class="fragment" data-fragment-index="0">
+						<li>NSS evaluation</li>
+						<li>Muddiest point</li>
+						<li>Module evaluation</li>
+					</ul>
+				<p></p>
+				<p class="fragment" data-fragment-index="0">
+					Some changes from last year were student suggestions.
+				</p>
+				</section>
+
+
+
+				<section data-markdown="" style="text-align: left; top: 350px; display: none;" data-markdown-parsed="true" hidden="" aria-hidden="true" class="future" data-node-uid="5"><h3 id="course-goals">Course goals</h3>
+<ul>
+<li>Learn how to develop systems to perform natural language processing tasks</li>
+<li>Understand the main algorithms used to learn such systems from data</li>
+<li>Familiarize ourselves with important applications</li>
+<li>Explore some of the state-of-the art approaches</li>
+</ul>
+</section>
+				<section style="text-align: left; top: 350px; display: none;" data-markdown="" data-markdown-parsed="true" hidden="" aria-hidden="true" class="future" data-node-uid="6"><h3 id="prerequisites">Prerequisites</h3>
+<ul class="fragment" data-fragment-index="0">
+<li>Text Processing course (<a href="https://staffwww.dcs.shef.ac.uk/people/R.Gaizauskas/campus_only/com3110/">COM3110/4115/6115</a>)</li>
+<li>Programming skills (i.e. Python3) see this <a href="https://sheffieldnlp.github.io/com4513-6513/labs/lab1_intro.html">lab sheet</a></li>
+</ul>
+<!-- -->
+<p><strong class="fragment" data-fragment-index="1">Optional (but helpful):</strong> <!-- --></p>
+<ul class="fragment" data-fragment-index="1">
+<li>Data-Driven Programming module (<a href="http://www.dcs.shef.ac.uk/intranet/teaching/public/modules/level2/com2004.html">COM2004</a>)</li>
+<li>Scalable Machine Learning module (<a href="http://www.dcs.shef.ac.uk/intranet/teaching/public/modules/msc/com6012.html">COM6012</a>)</li>
+<li>Linguistics: see this recent <a href="https://faculty.washington.edu/ebender/papers/100things.pdf">tutorial</a> by Emily Bender</li>
+</ul>
+<!-- -->
+<p class="fragment" data-fragment-index="2"><em>... and don't forget to ask me questions!</em></p>
+<!-- -->
+</section>
+
+				<section hidden="" aria-hidden="true" class="future" style="top: 350px; display: none;" data-node-uid="7">
+					<h3>Why Natural Language Processing?</h3>
+
+					<div style="position:relative; width:640px; height:480px; margin:0 auto;">
+
+					<img src="./Introduction to Natural Langauge Processing_files/googletranslate.png" width="640" height="480" class="fragment" style="position:absolute;top:0;left:0; background:none; border:none; box-shadow:none;" data-fragment-index="0">
+					<img src="./Introduction to Natural Langauge Processing_files/siri.jpg" class="fragment" width="640" height="480" style="position:absolute;top:0;left:0; background:none; border:none; box-shadow:none;" data-fragment-index="1">
+					<img src="./Introduction to Natural Langauge Processing_files/watson.jpg" class="fragment" width="640" height="480" style="position:absolute;top:0;left:0; background:none; border:none; box-shadow:none;" data-fragment-index="2">
+					<img src="./Introduction to Natural Langauge Processing_files/FaceBookFactCheck.png" width="640" height="480" class="fragment" style="position:absolute;top:0;left:0; background:none; border:none; box-shadow:none;" data-fragment-index="3">
+					<img src="./Introduction to Natural Langauge Processing_files/languageOfFood.jpg" width="640" height="480" class="fragment" style="position:absolute;top:0;left:0; background:none; border:none; box-shadow:none;" data-fragment-index="4">
+					<img src="./Introduction to Natural Langauge Processing_files/thePoliticalMind.jpeg" width="640" height="480" class="fragment" style="position:absolute;top:0;left:0; background:none; border:none; box-shadow:none;" data-fragment-index="5">
+					</div>
+				</section>
+
+				<section style="text-align: left; top: 350px; display: none;" data-markdown="" data-markdown-parsed="true" hidden="" aria-hidden="true" class="future" data-node-uid="8"><h3 id="why-is-nlp-challenging-">Why is NLP challenging?</h3>
+<ul class="fragment" data-fragment-index="0">
+<li>Natural languages (unlike programming languages) are not designed; they <strong>evolve</strong>!<ul>
+<li>new words appear constantly</li>
+<li>the parsing rules are flexible</li>
+<li>ambiguity is inherent</li>
+</ul>
+</li>
+</ul>
+<!-- -->
+<p></p><p></p>
+<ul class="fragment" data-fragment-index="1">
+<li>no known universal representation<ul>
+<li>most often application-specific</li>
+</ul>
+</li>
+</ul>
+<!-- -->
+<p></p><p></p>
+<ul class="fragment" data-fragment-index="2">
+<li>world knowldge is necessary for interpretation</li>
+</ul>
+<!-- -->
+<p></p><p></p>
+<ul class="fragment" data-fragment-index="3">
+<li>many languages, dialects, styles, etc.</li>
+</ul>
+<!-- -->
+</section>
+
+				<section style="text-align: left; top: 350px; display: none;" data-markdown="" data-markdown-parsed="true" hidden="" aria-hidden="true" class="future" data-node-uid="9"><h3 id="why-statistical-nlp-">Why statistical NLP?</h3>
+<p class="fragment" data-fragment-index="0">Learning from data (a.k.a. machine learning) adapts:<!-- --></p>
+<ul class="fragment" data-fragment-index="0">
+<li>to evolution: just learn from new data</li>
+<li>to different applications: just learn with the appropriate target representation</li>
+</ul>
+<!-- -->
+<p></p><p class="fragment" data-fragment-index="1">
+Compared to rule-based approaches, statistical ones:<!-- --></p>
+<ul class="fragment" data-fragment-index="1">
+<li>offer wider coverage</li>
+<li>can capture more complex patterns:<ul>
+<li>weighted features</li>
+<li>continuous representations (a.k.a. <em>neural networks</em>)</li>
+</ul>
+</li>
+</ul>
+<!-- -->
+</section>
+
+				<section hidden="" aria-hidden="true" class="future" style="top: 350px; display: none;" data-node-uid="10">
+					<h3>Why statistical NLP?</h3>
+					<img src="./Introduction to Natural Langauge Processing_files/googleVsystran.jpg" style="background:none; border:none; box-shadow:none;">
+					<!--TODO: Actually, they are going full neural ML: https://demo-pnmt.systran.net/production#/translation -->
+				</section>
+
+				<section style="text-align: left; top: 350px; display: none;" data-markdown="" data-markdown-parsed="true" hidden="" aria-hidden="true" class="future" data-node-uid="11"><h3 id="nlp-ml">NLP =? ML</h3>
+<p class="fragment" data-fragment-index="0">Short answer: <strong>NO</strong>t really</p>
+<!-- -->
+<ul class="fragment" data-fragment-index="1">
+<li>Useful ML-based NLP captures linguistic intuition</li>
+</ul>
+<!-- -->
+<ul class="fragment" data-fragment-index="2">
+<li>The target representations come from linguistics<center><img src="./Introduction to Natural Langauge Processing_files/amr.png" height="400" style="background:none; border:none; box-shadow:none;"></center>
+
+</li>
+</ul>
+<!-- -->
+</section>
+
+				<section data-markdown="" style="text-align: left; top: 350px; display: none;" data-markdown-parsed="true" hidden="" aria-hidden="true" class="future" data-node-uid="12"><h3 id="words-of-caution">Words of caution</h3>
+<p>When exploring a task, it is often useful to experiment
+with some simple rules to test our assumptions</p>
+<p> In fact, for some tasks rule-based approaches rule, especially in the industry:</p>
+<ul>
+<li>coreference resolution</li>
+<li>natural language generation</li>
+</ul>
+<p> If we don't know how to perform a task, unlikely that an ML algorithm will find it out for us</p>
+</section>
+
+				<section style="text-align: left; top: 350px; display: none;" data-markdown="" data-markdown-parsed="true" hidden="" aria-hidden="true" class="future" data-node-uid="13"><h3 id="some-food-for-though">Some food for though</h3>
+<p>&gt; 6,000 languages in the world, but in research papers?</p>
+<p class="fragment" data-fragment-index="0"><a href="http://sjmielke.com/acl-language-diversity.htm"><img src="./Introduction to Natural Langauge Processing_files/only-english.png" alt=""></a></p>
+<!-- -->
+<p class="fragment" data-fragment-index="1">NLP research has an English bias, our work is cut out!</p>
+<!-- -->
+</section>
+
+
+								<section style="text-align: left; top: 350px; display: none;" data-markdown="" data-markdown-parsed="true" hidden="" aria-hidden="true" class="future" data-node-uid="14"><h3 id="what-is-a-word-">What is a word?</h3>
+<p>Writing conventions (e.g. whitespace) are not universal:
+<a href="http://www.cs.waikato.ac.nz/~ihw/papers/00WT-YW-RMN-IHW-Comprsbased.pdf"><img src="./Introduction to Natural Langauge Processing_files/CJK_teehan_brocolli.png" alt="chinese"></a></p>
+<p class="fragment" data-fragment-index="0"><em>I like New Zealand Flowers</em> or <em>I like fresh broccoli</em>?</p>
+<!-- -->
+<p class="fragment" data-fragment-index="1">Even in English: <em>don't</em> or <em>do n't</em>?</p>
+<!-- -->
+</section>
+
+
+
+
+				<section style="text-align: left; top: 350px; display: none;" data-markdown="" data-markdown-parsed="true" hidden="" aria-hidden="true" class="future" data-node-uid="15"><h3 id="related-fields">Related fields</h3>
+<ul class="fragment" data-fragment-index="0">
+<li>machine learning</li>
+<li>linguistics</li>
+</ul>
+<!-- -->
+<p></p><p></p>
+<ul class="fragment" data-fragment-index="1">
+<li>cognitive science</li>
+<li>statistics</li>
+</ul>
+<!-- -->
+<p></p><p></p>
+<ul class="fragment" data-fragment-index="2">
+<li>any field that involves processing language:<ul>
+<li>literature, history, etc. (a.k.a. <em>digital humanities</em>)</li>
+<li>biology</li>
+<li>journalism</li>
+<li>...</li>
+</ul>
+</li>
+</ul>
+<!-- -->
+</section>
+
+				<section data-markdown="" style="text-align: left; top: 350px; display: none;" data-markdown-parsed="true" hidden="" aria-hidden="true" class="future" data-node-uid="16"><h3 id="course-overview">Course overview</h3>
+<ul>
+<li>lecture 1: intro</li>
+<li>lectures 2-3: language models</li>
+<li>lecture 4: part-of-speech tagging and hidden Markov models</li>
+<li>lecture 5: text classification with the perceptron</li>
+<li>lecture 6-7: structured prediction</li>
+<li>lectures 8,10: syntactic parsing</li>
+<li>lecture 9: Guest lecture by Prof. Jochen Leidner</li>
+</ul>
+</section>
+
+
+				<section data-markdown="" style="text-align: left; top: 350px; display: none;" data-markdown-parsed="true" hidden="" aria-hidden="true" class="future" data-node-uid="17"><h3 id="course-overview-cont-">Course overview (cont.)</h3>
+<ul>
+<li>lectures 11-12: word disambiguation and representation</li>
+<li>lectures 13-14: recurrent neural networks</li>
+<li>lecture 15: topic models</li>
+<li>lectures 16-17: natural language understanding/generation</li>
+<li>lectures 18-19: machine translation</li>
+<li>lecture 20: imitation learning</li>
+</ul>
+</section>
+
+
+<section style="text-align: left; top: 350px; display: none;" data-markdown="" data-markdown-parsed="true" hidden="" aria-hidden="true" class="future" data-node-uid="18"><h3 id="class-project">Class project</h3>
+<p><a href="https://sites.google.com/view/cwisharedtask2018/">Complex Word Identification</a> in English and Spanish.</p>
+<p>Predict which words can be <span style="color:red">difficult</span> and which are <span style="color:blue">easy</span> for a non-native speaker, e.g.:</p>
+<blockquote>
+<p>"Both China and the Philippines <span style="color:red">flexed</span> their <span style="color:blue">muscles</span> on Monday."</p>
+</blockquote>
+<p class="fragment" data-fragment-index="0">15% of the course grade, report + code</p>
+<!-- -->
+</section>
+
+
+				<section data-markdown="" style="text-align: left; top: 350px; display: none;" data-markdown-parsed="true" hidden="" aria-hidden="true" class="future" data-node-uid="19"><h3 id="bibliography">Bibliography</h3>
+<p><strong>Sources we will use in the course:</strong></p>
+<ul>
+<li>Jurafsky and Martin, Speech and Language Processing <a href="https://web.stanford.edu/~jurafsky/slp3/">3rd edition</a></li>
+<li>other materials referenced in the end of each lecture</li>
+</ul>
+<p><strong>Today's reading:</strong></p>
+<ul>
+<li>Julia Hirschberg and Christopher D. Manning. <a href="https://www.sciencemag.org/content/349/6245/261.full">Advances in natural language processing</a>. Science, 349(6245):261–266, 2015.</li>
+<li><a href="http://rws.xoba.com/newindex/indus.html">Fun read</a>: how a computational linguist got trouble by arguing on what is a language</li>
+</ul>
+</section>
+
+
+
+			</div>
+
+		<div class="backgrounds"><div class="slide-background present" data-loaded="true" style="display: block;"></div><div class="slide-background future" data-loaded="true" style="display: block;"></div><div class="slide-background future" data-loaded="true" style="display: block;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div><div class="slide-background future" style="display: none;"></div></div><div class="progress" style="display: block;"><span style="width: 0px;"></span></div><aside class="controls" data-controls-layout="bottom-right" data-controls-back-arrows="faded" style="display: block;"><button class="navigate-left" aria-label="previous slide" disabled="disabled"><div class="controls-arrow"></div></button><button class="navigate-right enabled highlight" aria-label="next slide"><div class="controls-arrow"></div></button><button class="navigate-up" aria-label="above slide" disabled="disabled"><div class="controls-arrow"></div></button><button class="navigate-down" aria-label="below slide" disabled="disabled"><div class="controls-arrow"></div></button></aside><div class="slide-number" style="display: block;"><span class="slide-number-a">1</span></div><div class="speaker-notes" data-prevent-swipe="" tabindex="0"></div><div class="pause-overlay"></div><div id="aria-status-div" aria-live="polite" aria-atomic="true" style="position: absolute; height: 1px; width: 1px; overflow: hidden; clip: rect(1px, 1px, 1px, 1px);">
+					Natural Language Processing
+					(COM4513/6513)
+					Introduction
+					
+						Andreas Vlachos
+							a.vlachos@sheffield.ac.uk
+							
+							
+						Department of Computer Science
+							University of Sheffield
+						
+					
+				</div><nav class="slide-menu slide-menu--left"><ol class="slide-menu-toolbar"><li data-panel="Slides" data-button="0" class="toolbar-panel-button active-toolbar-button"><span class="slide-menu-toolbar-label">Slides</span><br><i class="fa fa-list"></i></li><li id="close"><span class="slide-menu-toolbar-label">Close</span><br><i class="fa fa-times"></i></li></ol><div data-panel="Slides" class="slide-menu-panel active-menu-panel"><ul class="slide-menu-items"><li class="slide-menu-item active" data-item="0" data-slide-h="0" data-slide-v="0" data-node-uid="20"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Natural Language Processing</span></li><li class="slide-menu-item future" data-item="1" data-slide-h="1" data-slide-v="0" data-node-uid="21"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Course Practicalities</span></li><li class="slide-menu-item future" data-item="2" data-slide-h="2" data-slide-v="0" data-node-uid="22"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Assessment</span></li><li class="slide-menu-item future" data-item="3" data-slide-h="3" data-slide-v="0" data-node-uid="23"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Feedback</span></li><li class="slide-menu-item future" data-item="4" data-slide-h="4" data-slide-v="0" data-node-uid="24"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Course goals</span></li><li class="slide-menu-item future" data-item="5" data-slide-h="5" data-slide-v="0" data-node-uid="25"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Prerequisites</span></li><li class="slide-menu-item future" data-item="6" data-slide-h="6" data-slide-v="0" data-node-uid="26"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Why Natural Language Processing?</span></li><li class="slide-menu-item future" data-item="7" data-slide-h="7" data-slide-v="0" data-node-uid="27"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Why is NLP challenging?</span></li><li class="slide-menu-item future" data-item="8" data-slide-h="8" data-slide-v="0" data-node-uid="28"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Why statistical NLP?</span></li><li class="slide-menu-item future" data-item="9" data-slide-h="9" data-slide-v="0" data-node-uid="29"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Why statistical NLP?</span></li><li class="slide-menu-item future" data-item="10" data-slide-h="10" data-slide-v="0" data-node-uid="30"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">NLP =? ML</span></li><li class="slide-menu-item future" data-item="11" data-slide-h="11" data-slide-v="0" data-node-uid="31"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Words of caution</span></li><li class="slide-menu-item future" data-item="12" data-slide-h="12" data-slide-v="0" data-node-uid="32"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Some food for though</span></li><li class="slide-menu-item future" data-item="13" data-slide-h="13" data-slide-v="0" data-node-uid="33"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">What is a word?</span></li><li class="slide-menu-item future" data-item="14" data-slide-h="14" data-slide-v="0" data-node-uid="34"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Related fields</span></li><li class="slide-menu-item future" data-item="15" data-slide-h="15" data-slide-v="0" data-node-uid="35"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Course overview</span></li><li class="slide-menu-item future" data-item="16" data-slide-h="16" data-slide-v="0" data-node-uid="36"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Course overview (cont.)</span></li><li class="slide-menu-item future" data-item="17" data-slide-h="17" data-slide-v="0" data-node-uid="37"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Class project</span></li><li class="slide-menu-item future" data-item="18" data-slide-h="18" data-slide-v="0" data-node-uid="38"><i class="fa fa-check-circle past"></i><i class="fa fa-dot-circle-o active"></i><i class="fa fa-circle-thin future"></i><span class="slide-menu-item-title">Bibliography</span></li></ul></div></nav><div class="slide-menu-overlay"></div><div class="slide-menu-button"><a href="https://sheffieldnlp.github.io/com4513-6513/lectures_reveal_js/lecture1_intro.html#"><i class="fa fa-bars"></i></a></div></div>
+
+		<script src="./Introduction to Natural Langauge Processing_files/head.min.js"></script>
+		<script src="./Introduction to Natural Langauge Processing_files/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				slideNumber: true,
+
+				transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+				menu: { // Menu works best with font-awesome installed: sudo apt-get install fonts-font-awesome
+					themes: false,
+					transitions: false,
+					markers: true,
+					hideMissingTitles: true,
+				},
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/reveal.js-menu/menu.js' },
+				]
+			});
+
+		</script>
+
+	
+
+</body></html>
